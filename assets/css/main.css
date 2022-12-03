@@ -1,0 +1,543 @@
+/*
+  General Styles
+ */
+
+:root {
+  --bs-font-sans-serif: Poppins, sans-serif;
+  --bs-primary: #8490ff;
+  --bs-secondary: #62bdfc;
+  --bs-secondary-rgb: 98, 189, 252;
+  --bs-light: #f9f9ff;
+  --bs-dark: #04091e;
+  --bs-dark-rgb: 4,9,30;
+  /* Todo: Change direction to (to right) */
+  --bs-gradient: linear-gradient(to right, #8490ff 0%, #62bdfc 100%);
+}
+
+
+body {
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+a:hover {
+  --bs-link-hover-color: var(--bs-primary);
+}
+
+button {
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  border: 0;
+}
+
+
+/*
+  Utility Classes
+ */
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+.fs-7 {
+  font-size: 3rem;
+}
+
+.transition-colors {
+  transition: background 150ms, color 300ms;
+}
+
+.transition-all {
+  transition: all 500ms;
+}
+
+.hide {
+  width: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+/*
+  Components Styles
+ */
+
+.section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section-title-sm {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  border-radius: 0;
+  border: none;
+  text-transform: uppercase;
+  background: var(--bs-gradient);
+  padding: 0.7rem 1.2rem;
+}
+
+.btn-primary:hover {
+  box-shadow: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+}
+
+.container {
+  --bs-gutter-x: 1.8rem;
+}
+
+/*
+  Navbar
+ */
+
+.navbar {
+  --bs-navbar-active-color: var(--bs-primary);
+  --bs-navbar-color: var(--bs-black);
+  box-shadow: 0 3px 15px 3px rgb(132 144 255 / 30%);
+}
+
+.navbar-nav {
+  --bs-nav-link-hover-color: var(--bs-primary);
+}
+
+.nav-link {
+  --bs-nav-link-font-weight: 300;
+}
+
+/*
+  Sidebar
+ */
+
+.offcanvas {
+  --bs-offcanvas-bg: rgba(0, 0, 0, 0.95);
+  --bs-offcanvas-width: 50%;
+}
+
+/*
+  My Services
+ */
+
+#my-services .service:hover a,
+#my-services .service:hover svg {
+  color: var(--bs-primary);
+
+}
+
+
+/*
+  Our Latest Projects
+ */
+
+#latest-projects .projects-list button:hover,
+#latest-projects .projects-list button.active {
+  color: var(--bs-primary);
+}
+
+/*
+                                        Feedback Slider
+ */
+ .swiper-slide {
+  cursor: pointer;
+}
+
+.swiper-slide:hover .client-name {
+  color: var(--bs-primary)
+}
+
+.controller button {
+  width: 40px;
+  height: 45px;
+  background-color: #fff;
+  box-shadow: -5px 5px 5px 0 #ddd;
+  color: black;
+  margin: 2px;
+}
+
+.controller button:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+/* .single-slide .img-fluid{
+  width: 40px;
+  height: 40px;
+  margin: 25px;
+  margin-right: 65px;
+  border-radius: 50%;
+}
+.carousel-control-prev{
+  box-shadow: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--bs-primary);
+}
+.carousel-control-next{
+  box-shadow: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+  width: 40px;
+  height: 40px;
+  background-color: var(--bs-primary);
+}
+
+.desc a{
+font-weight: bold;
+} */
+
+
+/*
+                                        Pricing
+ */
+
+.single-price:hover{
+  scale: 1.05;
+  background-image: var(--bs-gradient);
+  color: white;
+  transition: all 0.3s ease-out;
+  z-index: 33;
+}
+.single-price .bottom-part a{
+  display: none;
+}
+.single-price .circle1{
+  margin: auto;
+  height: 7em;
+  width: 7em;
+  background-color: rgb(132 144 255 / 30%);
+}
+.single-price .circle2{
+  margin: auto;
+  height: 4em;
+  width: 4em;
+}
+
+.single-price:hover .circle1{
+  background-color:var(--bs-light);
+}
+.single-price:hover .circle2{
+  background-image: var(--bs-gradient);
+}
+.single-price:hover .bottom-part h2{
+  display: none;
+}
+.single-price:hover .bottom-part a{
+  display: block;
+  color: black;
+  font-weight: bold;
+}
+
+/*
+                                        Feedback Accordion
+ */
+
+.accordion-button::after {
+  /* content: "\f078";
+  order: -1;
+  margin-right: 12px;
+  margin-left: 0;
+  background: none !important;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  width: 10px; */
+  transition: all 0.5s ease-out;
+}
+.accordion-collapse{
+  transition: all 0.5s ease-out;
+}
+
+.bg-accordion:not([aria-expanded="true"]) {
+  background-color: #FAFCFF !important;
+  box-shadow: none !important;
+}
+
+.bg-accordion[aria-expanded="true"] {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+/*
+                                        Contact
+ */
+
+#send-btn{
+  float: right;
+  color: white;
+  background-color: var(--bs-primary);
+  margin-top: 1rem;
+  padding: 0.6rem 1.6rem;
+  border: 1px solid var(--bs-primary);
+}
+#send-btn:hover{
+  color: var(--bs-primary);
+  background-color: white;
+  transition: all 0.2s ease-out;
+}
+
+/*
+                                        Blog in Home
+ */
+
+.card-container:hover h2 {
+  color: var(--bs-primary) !important;
+}
+
+.card-container:hover .card-img-top {
+  transform: scale(1.2);
+}
+
+/*
+                                        Blog
+ */
+
+.header-image .h-overlay {
+  width: 100%;
+  height: 100%;
+  padding-top: 12%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.header-image .h-overlay a{
+  background-color: white;
+  border-radius: 0;
+  transition: all 0.2s ease-out;
+}
+.header-image .h-overlay a:hover{
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+}
+
+
+
+.image .overlay {
+  width: 19em;
+  height: 75%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  z-index: 50;
+}
+.image .overlay:hover{
+  background-color: rgba(132, 144, 255, 0.6)
+}
+.cat-title{
+  position: relative;
+}
+.cat-title::before{
+  content: '';
+  left:2.5em;
+  bottom: -15px;
+  width: 200px;
+  height: 2px;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 50;
+}
+
+
+.post-cat{
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
+}
+.post-body .btn{
+  color: black;
+  background-color: white;
+  transition: all 0.2s ease-out;
+}
+.post-body .btn:hover{
+  color: white;
+  background-color: #8490ff;
+}
+.tag-clouds .btn,.single-comment .btn{
+  height: 2.3em;
+  color: black;
+  background-color: white;
+  border-radius:unset;
+  transition: all 0.2s ease-out;
+}
+.tag-clouds .btn:hover,.single-comment .btn:hover{
+  color: white;
+  background-color: #8490ff;
+}
+.o-image:hover a{
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+#blog-sf-btn{
+  color: white;
+  background-color: #8490ff;
+  border-radius:unset;
+  transition: all 0.2s ease-out;
+}
+#blog-sf-btn:hover{
+  color: #8490ff;
+  border: 1px solid #8490ff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.pagination .page-link{
+  color: black;
+  border: none;
+  background-color: var(--bs-light);
+  transition: all 0.2s ease-out;
+}
+.pagination .page-link:hover,.page-link.active{
+  color: white;
+  background-color: #8490ff;
+}
+
+/*
+                                        Timeline
+ */
+
+ /* The actual timeline (the vertical ruler) */
+.main-timeline {
+  position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: whitesmoke;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  /* margin-left: -1px; */
+}
+
+/* Container around content */
+.timeline {
+  position: relative;
+  background-color: inherit;
+  width: 40%;
+}
+
+/* The circles on the timeline */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -11px;
+  background-color:var(--bs-primary);
+  border: 5px solid whitesmoke;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Place the container to the left */
+.left {
+  padding: 0px 40px 20px 0px;
+  left: 10%;
+}
+
+/* Place the container to the right */
+.right {
+  padding: 0px 0px 20px 40px;
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -10px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .main-timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .timeline {
+    width: 90%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 22px;
+  }
+
+  .left::before {
+    right: auto;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .left {
+    left: 0%;
+  }
+  .right {
+    left: 0%;
+  }
+}
